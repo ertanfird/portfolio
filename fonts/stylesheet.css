@@ -1,0 +1,72 @@
+@font-face {
+    font-family: 'Baufra';
+    src: url('Baufra-Regular.eot');
+    src: local('Baufra-Regular'),
+        url('Baufra-Regular.eot?#iefix') format('embedded-opentype'),
+        url('Baufra-Regular.woff2') format('woff2'),
+        url('Baufra-Regular.woff') format('woff'),
+        url('Baufra-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Baufra';
+    src: url('Baufra-DemiBold.eot');
+    src: local('Baufra-DemiBold'),
+        url('Baufra-DemiBold.eot?#iefix') format('embedded-opentype'),
+        url('Baufra-DemiBold.woff2') format('woff2'),
+        url('Baufra-DemiBold.woff') format('woff'),
+        url('Baufra-DemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Baufra';
+    src: url('Baufra-SemiBold.eot');
+    src: local('Baufra-SemiBold'),
+        url('Baufra-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('Baufra-SemiBold.woff2') format('woff2'),
+        url('Baufra-SemiBold.woff') format('woff'),
+        url('Baufra-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Baufra';
+    src: url('Baufra-Bold.eot');
+    src: local('Baufra-Bold'),
+        url('Baufra-Bold.eot?#iefix') format('embedded-opentype'),
+        url('Baufra-Bold.woff2') format('woff2'),
+        url('Baufra-Bold.woff') format('woff'),
+        url('Baufra-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Baufra';
+    src: url('Baufra-Light.eot');
+    src: local('Baufra-Light'),
+        url('Baufra-Light.eot?#iefix') format('embedded-opentype'),
+        url('Baufra-Light.woff2') format('woff2'),
+        url('Baufra-Light.woff') format('woff'),
+        url('Baufra-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Baufra';
+    src: url('Baufra-Medium.eot');
+    src: local('Baufra-Medium'),
+        url('Baufra-Medium.eot?#iefix') format('embedded-opentype'),
+        url('Baufra-Medium.woff2') format('woff2'),
+        url('Baufra-Medium.woff') format('woff'),
+        url('Baufra-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
