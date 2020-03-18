@@ -16,7 +16,7 @@
     </div>
 </div>
 <form method="post" action="">
-    <table id="dynamic">
+    <table>
         <caption>Monday</caption>
         <thead>
             <tr>
@@ -174,7 +174,9 @@
 
 <script src="js/dynamicTable.js"></script>
 <script>
-    new DynamicTable( document.getElementById("dynamic") );
+    new DynamicTable( window, 
+                  document.getElementById("dynamic"),
+                  {1:"val1", 2:"val2", 3:"val3", 4:"val4", 5:"val5"} );
 </script>
 </body>
 </html>
