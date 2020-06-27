@@ -250,8 +250,8 @@ a:hover {
 }
 
 .section-2__btn{
-	width: 7vh;
-	height: 7vh;
+	width: 9vh;
+	height: 9vh;
 	border-radius: 50%;
 	position: absolute;
 	display: flex;
@@ -266,7 +266,7 @@ a:hover {
 
 #back{
 	left: 1%;
-	padding-right: 1vh; 
+	padding-right: 1vh;
 }
 
 #next{
