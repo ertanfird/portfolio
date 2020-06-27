@@ -250,8 +250,8 @@ a:hover {
 }
 
 .section-2__btn{
-	width: 19vh;
-	height: 19vh;
+	width: 8vh;
+	height: 8vh;
 	border-radius: 50%;
 	position: absolute;
 	display: flex;
@@ -581,8 +581,5 @@ iframe{
 	}
 	.nav.active{
 		top: 0%;
-	}
-	.section-2__mobile{
-
 	}
 }
