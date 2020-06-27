@@ -61,7 +61,7 @@ document.querySelector('#sb-1-m').onclick = function() {
 	document.querySelector('.iframe').style.left = '0';
 };
 document.querySelector('#sb-14').onclick = function() {
-	document.querySelector('#comment-14').innerHTML = `</div><iframe src="https://ertan-fird.github.io/ertan-fird-example/" ></iframe>`;
+	document.querySelector('#comment-14').innerHTML = `</div><iframe src="https://ertan-fird.github.io/work_14/" ></iframe>`;
 	console.log("work");
 	document.querySelector("#loader-d").style.display = 'flex';
 	document.querySelector("#loader-d").style.left = '33.335%';
@@ -69,7 +69,7 @@ document.querySelector('#sb-14').onclick = function() {
 };
 
 document.querySelector('#sb-14-m').onclick = function() {
-	document.querySelector('#comment-14-m').innerHTML = `</div><iframe class="iframe-m" src="https://ertan-fird.github.io/ertan-fird-example/" width="239px" height="510px"></iframe>`;
+	document.querySelector('#comment-14-m').innerHTML = `</div><iframe class="iframe-m" src="https://ertan-fird.github.io/work_14/" width="239px" height="510px"></iframe>`;
 	console.log("work");
 	document.querySelector("#loader-m").style.display = 'flex'
 	document.querySelector("#loader-m").style.left = '33.335%';
