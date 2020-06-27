@@ -250,8 +250,8 @@ a:hover {
 }
 
 .section-2__btn{
-	width: 9vh;
-	height: 9vh;
+	width: 19vh;
+	height: 19vh;
 	border-radius: 50%;
 	position: absolute;
 	display: flex;
@@ -260,7 +260,7 @@ a:hover {
 	font-size: 72px;
 	font-weight: 200;
 	background: rgba(221,221,221, 0.4);
-	z-index: 5;
+	z-index: 15;
 	color: #676767;
 }
 
