@@ -14,7 +14,7 @@ body.lock{
 }
 
 h1{
-	font-weight: 300;
+	font-weight: 800;
 	font-size: 4vh;
 	margin-top: 4%;
 }
@@ -30,6 +30,10 @@ p{
 	color: #fff;
 	margin: 3%;
 	font-weight: 400;
+}
+#shuffle{
+	font-weight: 600;
+	background: #000;
 }
 
 a{
@@ -222,10 +226,12 @@ a:hover {
 }
 
 .section-1__img{
-	width: 85vh;
+	width: 80vh;
 	position: absolute;
-	right: 2%;
-	bottom: 5%;
+	left: 78%;
+	transform: translate(-50%, 0);
+	bottom: 0%;
+	border: 0px solid #676767;
 	z-index: 2;
 }
 

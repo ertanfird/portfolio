@@ -5,6 +5,24 @@ $(window).on('load', function () {
 	$preloader.delay(1500).fadeOut('slow');
 	});
 
+//SHUFFLE
+	var shuffle = $("#shuffle"); 
+	
+	// Shuffle the contents of shuffle
+	shuffle.shuffleLetters();
+
+
+	// Leave a 4 second pause
+
+	setTimeout(function(){
+
+		userText.val("type anything and hit return..").fadeIn();
+		
+	},10000);
+
+//CURSOR
+
+
 //СЛАЙДЕР РАБОТ
 var left = 0;
 var iframe = document.querySelectorAll('.iframe');
