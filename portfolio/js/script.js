@@ -6,8 +6,8 @@ $(window).on('load', function () {
 	});
 
 //SHUFFLE
-	var shuffle = $("#shuffle"); 
-	
+	var shuffle = $("#shuffle");
+
 	// Shuffle the contents of shuffle
 	shuffle.shuffleLetters();
 
@@ -17,13 +17,16 @@ $(window).on('load', function () {
 	setTimeout(function(){
 
 		userText.val("type anything and hit return..").fadeIn();
-		
+
 	},10000);
 
 //CURSOR
 
 
 //СЛАЙДЕР РАБОТ
+
+
+
 var left = 0;
 var iframe = document.querySelectorAll('.iframe');
 
