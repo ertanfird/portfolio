@@ -25,77 +25,55 @@ $(window).on('load', function () {
 
 //СЛАЙДЕР РАБОТ
 
+const websites = [
+		"https://mirror-test.000webhostapp.com/index.php",
+		"https://ertan-fird.github.io/work_14/",
+		"./websites/site3.html"
+];
+const $frame        = $(".slider-desctop__frame");
+const $frameM       = $(".slider-mobile__frame")
+const $sliderWork   = $(".slider-desctop__covers");
+const $sliderMobile = $(".slider-mobile__covers");
+
+$sliderWork.slick({
+		arrows: true,
+		appendArrows: ".slider-work__arrows",
+		prevArrow: $('.prev'),
+		nextArrow: $('.next'),
+		asNavFor: ".slider-mobile__covers"
+});
+
+$sliderWork.on("click", ".slider-desctop__item", function(e){
+		const $index = $(this).data("index");
+
+		$frame.attr("src", websites[$index]);
+		$frame.fadeIn(200);
+});
 
 
-var left = 0;
-var iframe = document.querySelectorAll('.iframe');
 
-document.querySelector('#next').onclick = sliderLeft;
-document.querySelector('#back').onclick = sliderRight;
+$sliderWork.on("beforeChange", () => {
+		$frame.fadeOut(400);
+});
 
-function sliderLeft() {
-	var sliderWorksDes = document.querySelector('.desctop');
-	var sliderWorksMob = document.querySelector('.mobile');
-	left = left + 100;
-	if (left > 200) {
-		left = 0;
-	}
-	sliderWorksDes.style.right = left + '%';
-	sliderWorksMob.style.right = left + '%';
-	document.querySelector("#loader-d").style.display = 'none';
-	document.querySelector("#loader-m").style.display = 'none';
-	iframe.forEach(function (entry) {
-		entry.innerHTML = '';
-	});
-}
+$sliderMobile.slick({
+		arrows: false,
+		asNavFor: ".slider-desctop__covers"
+});
 
-function sliderRight() {
-	var sliderWorksDes = document.querySelector('.desctop');
-	var sliderWorksMob = document.querySelector('.mobile');
-	if (left < 100) {
-		left = 200;
-	}else{
-		left = left - 100;
-	}
-	sliderWorksDes.style.right = left + '%';
-	sliderWorksMob.style.right = left + '%';
-	document.querySelector("#loader-d").style.display = 'none';
-	document.querySelector("#loader-m").style.display = 'none';
-	iframe.forEach(function (entry) {
-		entry.innerHTML = '';
-	});
-}
+$sliderMobile.on("click", (e) => {
+	 const target    = e.target,
+				 item      = target.closest(".slider-mobile__item"),
+				 index     = item.dataset.index;
 
-document.querySelector('#sb-1').onclick = function() {
-	document.querySelector('#comment-1').innerHTML = `</div><iframe src="https://mirror-test.000webhostapp.com/index.php" ></iframe>`;
-	console.log("work");
-	document.querySelector("#loader-d").style.display = 'flex';
-	document.querySelector("#loader-d").style.left = '0';
-	document.querySelector('.iframe').style.left = '0';
-};
+	 $frameM.attr("src", websites[index]);
+	 $frameM.fadeIn(200);
+});
+$sliderMobile.on("beforeChange", () => {
+		$frameM.fadeOut(400);
+});
 
-document.querySelector('#sb-1-m').onclick = function() {
-	document.querySelector('#comment-1-m').innerHTML = `</div><iframe class="iframe-m" src="https://mirror-test.000webhostapp.com/index.php" width="239px" height="510px"></iframe>`;
-	console.log("work");
-	document.querySelector("#loader-m").style.display = 'flex'
-	document.querySelector("#loader-m").style.left = '0';
-	document.querySelector('.iframe').style.left = '0';
-};
-document.querySelector('#sb-14').onclick = function() {
-	document.querySelector('#comment-14').innerHTML = `</div><iframe src="https://ertan-fird.github.io/work_14/" ></iframe>`;
-	console.log("work");
-	document.querySelector("#loader-d").style.display = 'flex';
-	document.querySelector("#loader-d").style.left = '33.335%';
-	document.querySelector('#comment-14').style.left = '33.335%';
-};
 
-document.querySelector('#sb-14-m').onclick = function() {
-	document.querySelector('#comment-14-m').innerHTML = `</div><iframe class="iframe-m" src="https://ertan-fird.github.io/work_14/" width="239px" height="510px"></iframe>`;
-	console.log("work");
-	document.querySelector("#loader-m").style.display = 'flex'
-	document.querySelector("#loader-m").style.left = '33.335%';
-	document.querySelector('#comment-14-m').style.left = '33.335%';
-};
 
 //СКРОЛ ШАПКА
 var scrolled;

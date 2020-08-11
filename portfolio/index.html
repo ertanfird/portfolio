@@ -4,6 +4,12 @@
 	<title>ErtanFird</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" />
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+	<script type="text/javascript" src="js/jquery.shuffleLetters.js" defer></script>
+	<script type="text/javascript" src="js/script.js" defer></script>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/particles.css">
 </head>
@@ -71,82 +77,84 @@
 		<div class="section-1__footer">
 		</div>
 	</section>
+
 	<section class="section-2 anchor" id="section-2">
-		<button class="section-2__btn" id="back"><</button>
-		<button class="section-2__btn" id="next">></button>
-		<div class="section-2__desctop">
-			<div class="desctop">
-				<div class="desctop-screen screen-1">
-					<div class="txt">
-						<img src="img/logo-1.png" alt="" class="logo-work">
-						<div class="txt">Легенда: новый стартап проект провайдера спутиникового интернета. С нуля разработанный уникальный тематический дизайн. </div>
-					</div>
-					<button class="btn start" id="sb-1">START</button>
-					<div id="loader-d" ><div class="svg_anm-d"></div></div>
-					<div class="iframe" id="comment-1"></div>
-				</div>
-
-				<div class="desctop-screen screen-14">
-					<div class="txt">
-						<img src="img/logo-14.png" alt="" class="logo-work">
-						<div class="txt">
-							Адаптивный кроссбраузерный лендинг сайта булочной, пекарни, кофейни и т.д.
-						</div>
-					</div>
-					<button class="btn start" id="sb-14">START</button>
-					<div id="loader-d" ><div class="svg_anm-d"></div></div>
-					<div class="iframe" id="comment-14"></div>
-				</div>
-
-				<div class="desctop-screen screen-15">
-					<div class="txt">
-						<img src="img/logo-15.png" alt="" class="logo-work">
-						<div class="txt">Умный ежедневник, помогающий разумно распределять время. Находится в разработке</div>
-					</div>
-					<button class="btn start" id="sb-15">START</button>
-					<div class="iframe" id="comment-15"><!--</div>
-					<iframe src="https://mirror-test.000webhostapp.com/index.php" width="100%" height="100%"></iframe>
-					<div>--></div>
-				</div>
-
-			</div>
-		</div>
-		<div class="section-2__mobile">
-			<div class="over-screen">
-				<div class="mobile">
-					<div class="mobile-screen screen-1">
-						<img src="img/logo-1.png" alt="" class="logo-work-mob">
-						<div class="txt">
-							<div class="txt">Легенда: новый стартап проект провайдера спутиникового интернета. С нуля разработанный уникальный тематический дизайн. </div>
-						</div>
-						<button class="btn start-mob" id="sb-1-m">START</button>
-						<div class="iframe" id="comment-1-m"></div>
-						<div id="loader-m" ><div class="svg_anm-d"></div></div>
-					</div>
-					<div class="mobile-screen screen-14">
-						<img src="img/logo-14.png" alt="" class="logo-work-mob">
-						<div class="txt">
-							<div class="txt">
-								Адаптивный кроссбраузерный лендинг сайта булочной, пекарни, кофейни и т.д.
-							</div>
-						</div>
-						<button class="btn start-mob" id="sb-14-m">START</button>
-						<div class="iframe" id="comment-14-m"></div>
-						<div id="loader-m" ><div class="svg_anm-d"></div></div>
-					</div>
-					<div class="mobile-screen screen-15">
-						<img src="img/logo-15.png" alt="" class="logo-work-mob">
-						<div class="txt">
-							<div class="txt">Умный ежедневник, помогающий разумно распределять время. Находится в разработке</div>
-						</div>
-						<button class="btn start-mob" id="sb-15-m">START</button>
-						<div class="iframe" id="comment-15-m"></div>
-					</div>
-
-				</div>
-			</div>
-		</div>
+		<div class="slider-desctop">
+        <iframe src="https://mirror-test.000webhostapp.com/index.php" frameborder="0" class="slider-desctop__frame"></iframe>
+        <div class="slider-desctop__covers">
+            <div class="slider-desctop__item" data-index="0">
+                <img src="img/screen-1.png" alt="" class="slider-desctop__img">
+								<div class="slider-desctop__description description">
+										<img src="img/logo-1.png" class="logo" alt="">
+										<div class="txt">
+											Стартап провайдера спутникового интернета. Для входа используйте e-mail "test@domain.com" пароль "password1"
+										</div>
+										<button type="button" name="button">start</button>
+								</div>
+            </div>
+            <div class="slider-desctop__item" data-index="1">
+                <img src="img/screen-14.png" alt="" class="slider-desctop__img">
+								<div class="slider-desctop__description description">
+										<img src="img/logo-1.png" class="logo" alt="">
+										<div class="txt">
+											Стартап провайдера спутникового интернета. Для входа используйте e-mail "test@domain.com" пароль "password1"
+										</div>
+										<button type="button" name="button">start</button>
+								</div>
+            </div>
+            <div class="slider-desctop__item" data-index="2">
+                <img src="img/screen-15.png" alt="" class="slider-desctop__img">
+								<div class="slider-desctop__description description">
+										<img src="img/logo-1.png" class="logo" alt="">
+										<div class="txt">
+											Стартап провайдера спутникового интернета. Для входа используйте e-mail "test@domain.com" пароль "password1"
+										</div>
+										<button type="button" name="button">start</button>
+								</div>
+            </div>
+        </div>
+    </div>
+    <div class="slider-mobile">
+        <iframe src="https://mirror-test.000webhostapp.com/index.php" frameborder="0" class="slider-mobile__frame"></iframe>
+        <div class="slider-mobile__covers">
+            <div class="slider-mobile__item" data-index="0">
+                <img src="img/screen-1.png" alt="" class="slider-mobile__img">
+								<div class="slider-mobile__description description">
+										<img src="img/logo-1.png" class="logo" alt="">
+										<div class="txt">
+											Стартап провайдера спутникового интернета. Для входа используйте e-mail "test@domain.com" пароль "password1"
+										</div>
+										<button type="button" name="button">start</button>
+								</div>
+            </div>
+            <div class="slider-mobile__item" data-index="1">
+                <img src="img/screen-14.png" alt="" class="slider-mobile__img">
+								<div class="slider-mobile__description description">
+										<img src="img/logo-1.png" class="logo" alt="">
+										<div class="txt">
+											Стартап провайдера спутникового интернета. Для входа используйте e-mail "test@domain.com" пароль "password1"
+										</div>
+										<button type="button" name="button">start</button>
+								</div>
+            </div>
+            <div class="slider-mobile__item" data-index="2">
+                <img src="img/screen-15.png" alt="" class="slider-mobile__img">
+								<div class="slider-mobile__description description">
+										<img src="img/logo-1.png" class="logo" alt="">
+										<div class="txt">
+											Стартап провайдера спутникового интернета. Для входа используйте e-mail "test@domain.com" пароль "password1"
+										</div>
+										<button type="button" name="button">start</button>
+								</div>
+            </div>
+        </div>
+    </div>
+    <div class="slider-work__arrows">
+        <div class="prev"><</div>
+        <div class="next">></div>
+    </div>
 	</section>
+
 	<section class="section-3 anchor" id="section-3">
 		<div class="section-3__block">
 			<div class="order-0">
@@ -156,6 +164,7 @@
 			</div>
 		</div>
 	</section>
+
 	<section class="section-4 anchor" id="section-4">
 		<div class="section-4__tape l"></div>
 		<h2>CONTACT</h2>
@@ -174,9 +183,7 @@
 		<p class="contact">Готов к сотруднечеству;)</p>
 		<div class="section-4__tape r"></div>
 	</section>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous" defer></script>
-	<script type="text/javascript" src="js/jquery.shuffleLetters.js" defer></script>
-	<script type="text/javascript" src="js/script.js" defer></script>
+
 
 </body>
 </html>
