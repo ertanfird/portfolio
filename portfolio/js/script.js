@@ -14,9 +14,6 @@ $(window).on('load', function () {
 
 
 
-//CURSOR
-
-
 //СЛАЙДЕР РАБОТ
 
 const websites = [
@@ -72,77 +69,6 @@ $sliderMobile.on("beforeChange", () => {
 });
 
 
-//
-//
-// var left = 0;
-// var iframe = document.querySelectorAll('.iframe');
-//
-// document.querySelector('#next').onclick = sliderLeft;
-// document.querySelector('#back').onclick = sliderRight;
-//
-// function sliderLeft() {
-// 	var sliderWorksDes = document.querySelector('.desctop');
-// 	var sliderWorksMob = document.querySelector('.mobile');
-// 	left = left + 100;
-// 	if (left > 200) {
-// 		left = 0;
-// 	}
-// 	sliderWorksDes.style.right = left + '%';
-// 	sliderWorksMob.style.right = left + '%';
-// 	document.querySelector("#loader-d").style.display = 'none';
-// 	document.querySelector("#loader-m").style.display = 'none';
-// 	iframe.forEach(function (entry) {
-// 		entry.innerHTML = '';
-// 	});
-// }
-//
-// function sliderRight() {
-// 	var sliderWorksDes = document.querySelector('.desctop');
-// 	var sliderWorksMob = document.querySelector('.mobile');
-// 	if (left < 100) {
-// 		left = 200;
-// 	}else{
-// 		left = left - 100;
-// 	}
-// 	sliderWorksDes.style.right = left + '%';
-// 	sliderWorksMob.style.right = left + '%';
-// 	document.querySelector("#loader-d").style.display = 'none';
-// 	document.querySelector("#loader-m").style.display = 'none';
-// 	iframe.forEach(function (entry) {
-// 		entry.innerHTML = '';
-// 	});
-// }
-//
-// document.querySelector('#sb-1').onclick = function() {
-// 	document.querySelector('#comment-1').innerHTML = `</div><iframe src="https://mirror-test.000webhostapp.com/index.php" ></iframe>`;
-// 	console.log("work");
-// 	document.querySelector("#loader-d").style.display = 'flex';
-// 	document.querySelector("#loader-d").style.left = '0';
-// 	document.querySelector('.iframe').style.left = '0';
-// };
-//
-// document.querySelector('#sb-1-m').onclick = function() {
-// 	document.querySelector('#comment-1-m').innerHTML = `</div><iframe class="iframe-m" src="https://mirror-test.000webhostapp.com/index.php" width="239px" height="510px"></iframe>`;
-// 	console.log("work");
-// 	document.querySelector("#loader-m").style.display = 'flex'
-// 	document.querySelector("#loader-m").style.left = '0';
-// 	document.querySelector('.iframe').style.left = '0';
-// };
-// document.querySelector('#sb-14').onclick = function() {
-// 	document.querySelector('#comment-14').innerHTML = `</div><iframe src="https://ertan-fird.github.io/work_14/" ></iframe>`;
-// 	console.log("work");
-// 	document.querySelector("#loader-d").style.display = 'flex';
-// 	document.querySelector("#loader-d").style.left = '33.335%';
-// 	document.querySelector('#comment-14').style.left = '33.335%';
-// };
-//
-// document.querySelector('#sb-14-m').onclick = function() {
-// 	document.querySelector('#comment-14-m').innerHTML = `</div><iframe class="iframe-m" src="https://ertan-fird.github.io/work_14/" width="239px" height="510px"></iframe>`;
-// 	console.log("work");
-// 	document.querySelector("#loader-m").style.display = 'flex'
-// 	document.querySelector("#loader-m").style.left = '33.335%';
-// 	document.querySelector('#comment-14-m').style.left = '33.335%';
-// };
 
 //СКРОЛ ШАПКА
 var scrolled;
