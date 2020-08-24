@@ -8,6 +8,23 @@ body {
   overflow: hidden;
 }
 
+.upScroll{
+  position: fixed;
+  bottom: 20px;
+  right: 15px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #F4F4F4;
+  color: #646464;
+  text-align: center;
+  padding: 5px;
+  font-size: 24px;
+  opacity: 0.8;
+  z-index: 30;
+  display: none;
+}
+
 .container {
   max-width: 1130px;
   padding: 0 15px;

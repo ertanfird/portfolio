@@ -1,4 +1,17 @@
 $(document).ready(function() {
+//SCROLL
+ $("a[rel='m_PageScroll2id']").mPageScroll2id();
+ var scrolled;
+window.onscroll = function() {
+scrolled = window.pageYOffset || document.documentElement.scrollTop;
+		if(scrolled < 200){
+			$(".upScroll").css({"display":"none"})
+		}
+		if(200 < scrolled){
+		$(".upScroll").css({"display":"block"})
+		}
+	}
+
 //BACKGROUND
 	function ibg(){
 		$.each($('.ibg'), function(index, val) {
@@ -13,6 +26,11 @@ $(document).ready(function() {
 	$('.icon-menu').click(function(e) {
 		$(this).toggleClass("active");
 		$('.menu__body').toggleClass("active");
+		$('body').toggleClass("lock");
+		e.stopPropagation();
+	});
+	$('.menu__body').click(function(e) {
+		$(this).toggleClass("active");
 		$('body').toggleClass("lock");
 		e.stopPropagation();
 	});
