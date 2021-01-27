@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<title>Page Title</title>
+	<meta name='viewport' content='width=device-width, initial-scale=1'>
+	<link rel='stylesheet' type='text/css' media='screen' href='css/main.min.css'>
+	<script src='js/main.min.js'></script>
+</head>
+
+<body>
+	<div class="window">
+		<div class="window__tittle">Калькулятор стоимости поездки</div>
+		<div class="window__item">
+			<label for="consumpition">Расход на 100км</label>
+			<input class="window__input" type="text" id="consumpition">
+		</div>
+		<div class="window__item">
+			<label for="price">Цена</label>
+			<input class="window__input" type="text" id="price">
+		</div>
+		<div class="window__item">
+			<label for="distance">Расстояние</label>
+			<input class="window__input" type="text" id="distance">
+		</div>
+		<div class="window__result">
+			<div id="result"></div>
+			<button class="window__button" onclick="travelPrice()">GO!</button>
+		</div>
+	</div>
+</body>
+
+</html>
