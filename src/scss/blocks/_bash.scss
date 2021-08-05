@@ -1,0 +1,46 @@
+.bash{
+  position: absolute;
+  top: 6%;
+  left: 28%;
+  width: 600px;
+  height: 360px;
+  overflow: hidden;
+  transform: translateX(-50%);
+  border-radius: 22px;
+  background-color: #030c14;
+  box-shadow: 4px 3px 35px 0px rgba(0,0,0,0.71);
+  color: #ffffff;
+  transition: all $animation;
+  &__tabs {
+    display: flex;
+    width: 100%;
+    border-bottom: 1px solid #121b24;
+  }
+  &__tab {
+    padding: 8px 15px;
+    border-right: 1px solid #121b24;
+    font-size: 16px;
+  }
+  &__console {
+    margin: 8px;
+  }
+  &__comand {
+    letter-spacing: 1.6;
+    text-align: justify;
+    word-wrap: break-word;
+  }
+  &__textarea {
+    width: 60%;
+    height: 16px;
+    border: none;
+    background-color: #030c14;
+    color: #ffffff;
+    font-family: "Roboto";
+    font-size: 16px;
+    resize: none;
+  }
+  &__textarea:focus {
+    border: none;
+    outline: none;
+  }
+}
