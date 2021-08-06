@@ -184,8 +184,8 @@ btnShowWorks.onclick = showWorks;
 const websites = [
   "https://mirror-test.000webhostapp.com/index.php",
   "https://north-crimea.ru",
-  "https://ertan-fird.github.io/work_13/",
-  "https://ertan-fird.github.io/work_14/",
+  "https://ertanfird.github.io/porten/",
+  "https://ertanfird.github.io/tastyshop/",
   "https://ironman-test.000webhostapp.com/"
 ];
 const websitesMobile = [
