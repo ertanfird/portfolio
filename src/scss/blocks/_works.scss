@@ -4,11 +4,13 @@
   top: 105%;
   flex-direction: column;
   width: 100%;
+  min-height: 90%;
   height: 90%;
   transition: all $animation;;
   &__display {
     display: flex;
     position: relative;
+    height: 100%;
     align-items: center;
     justify-content: space-around;
     padding: 20px;
@@ -22,9 +24,12 @@
     width: 840px;
     height: 74vh;
     border-radius: 22px;
-    background: #030c14;
+    background: $color-theme;
     background-size: contain;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.75);
+    @include mobile {
+      display: none;
+    }
   }
   &__header {
     display: flex;
@@ -75,7 +80,7 @@
     height: calc(200% - 64px);
     transform: scale(0.5);
     border-radius: 0 0 44px 44px;
-    background: #ffffff;
+    background: $color-wh;
     &-mobile {
       display: none;
       z-index: 4;
@@ -155,7 +160,7 @@
     width: calc(100% - (30px)*2);
     height: calc(100% - (40px)*2);
     padding: 40px 30px;
-    color: #FFFFFF;
+    color: $color-wh;
     font-size: 2.8vh;
 
     &-mobile {
@@ -194,8 +199,16 @@
     height: calc(74vh - (14px)*2);
     padding: 14px;
     border-radius: 44px;
-    background-color: #030c14;
+    background-color: $color-theme;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.75);
+    z-index: 3;
+    @include tablet {
+      position: absolute;
+      right: 4%;
+    }
+    @include mobile {
+      position: relative;
+    }
     &::before {
       z-index: 9999;
       position: absolute;
@@ -205,7 +218,7 @@
       height: 14px;
       transform: translateX(-50%);
       border-radius: 0 0 8px 8px;
-      background: #030c14;
+      background: $color-theme;
       content: "";
     }
   }
