@@ -7,15 +7,14 @@ import './vendor/particles';
 //import '../../node_modules/normalize/lib/normalize'
 
 //my modules
-//----------------
+//===================================================//
 
 //variables
 global.jQuery = $;
 global.$ = $;
 //variables
 const btnShowWorks = document.querySelector('#showWorks');
-const articleResume = document.querySelector('.resume');
-const articleBash = document.querySelector('.bash');
+const bash = document.querySelector('.bash');
 const sectionWorks = document.querySelector('.works');
 const websites = [
   "https://mirror-test.000webhostapp.com/index.php",
@@ -24,8 +23,6 @@ const websites = [
   "https://ertanfird.github.io/tastyshop/",
   "https://ironman-test.000webhostapp.com/"
 ];
-const $frame = $(".works__frame");
-const $frameM = $(".works__frame-mobile")
 const $sliderWork = $(".works__covers");
 const $sliderMobile = $(".works__covers-mobile");
 let currentWorksArray = document.querySelectorAll('.works__item');
@@ -37,13 +34,12 @@ let $workArrow = $('.works__arrow');
 const workslink = document.querySelector('#worksLink');
 const workslink2 = $('#worksLink');
 const desktop = document.querySelector('.works__desktop');
-const mobile = $('.works__mobile');
-const windowWidth = window.innerWidth;
-const windowHeight = window.innerHeight;
-let responsivePoint = windowWidth / windowHeight;
+const mobile = document.querySelector('.works__mobile');
+const worksDisplay = document.querySelector('.works__display');
+let responsivePoint = window.innerWidth / window.innerHeight;
 const resume = document.querySelector('.resume');
 const resumeShow = document.querySelector('.resume__show');
-
+//===================================================//
 
 //ЗАГРУЗКА
 $(window).on('load', function () {
@@ -61,131 +57,142 @@ $(window).on('load', function () {
     countCurrentWork();
   });
 });
-
-particlesJS('particles-js', require('./particles.json'));
+//===================================================//
 
 //responsive
-switch (true) {
-  case (responsivePoint > 1.7):
-    resumeShow.style.display = "none";
-    resume.classList.remove('resume-mobile');
-    resume.classList.remove('resume-tablet');
-    break;
-  case (responsivePoint > 1.38):
-    console.log(">1.3");
-    console.log(responsivePoint);
-    resume.classList.add('resume-tablet');
-    resume.classList.remove('resume-mobile');
-    break;
-  case (responsivePoint > 0.1):
-    console.log("<1.3");
-    console.log(responsivePoint);
-    desktop.style.display = "none";
-    resume.classList.add('resume-mobile');
-    resume.classList.remove('resume-tablet');
-    articleBash.style.left = "-80%";
-    btnShowWorks.style.left = "-80%";
-    break;
-  default:
-    alert("Error");
-    alert(responsivePoint);
-    break;
-};
-
-//showResume
-resumeShow.onclick = function () {
+let responsive = function () {
   switch (true) {
     case (responsivePoint > 1.7):
       resumeShow.style.display = "none";
+      resume.classList.remove('resume-mobile');
+      resume.classList.remove('resume-tablet');
+      if (btnShowWorks.classList.contains('active') == 0) {
+        resume.classList.remove('resume-hide');
+        resume.classList.remove('resume-hide-mobile');
+      };
+      bash.classList.remove('bash-mobile');
+      bash.classList.remove('bash-tablet');
+      btnShowWorks.classList.remove('button-mobile');
+      desktop.style.display = "flex";
+      worksDisplay.style["justify-content"] = "space-around";
+      particlesJS('particles-js', require('./particles.json'));
       break;
-    case (responsivePoint > 1.38):
-      if (resumeShow.classList.contains('active')) {
-        resume.style.right = "-20px";
-        resumeShow.innerHTML = '>';
-      } else {
-        resume.style.right = "-440px";
-        resumeShow.innerHTML = '<';
-      }
-      $('.resume__show').toggleClass('active');
-      break;
-    case (responsivePoint > 0.1):
-      if (resumeShow.classList.contains('active')) {
-        resume.style.right = "-20px";
-        resumeShow.innerHTML = '>';
-        articleBash.style.left = "-80%";
-        btnShowWorks.style.left = "-80%";
-      } else {
-        resume.style.right = "calc(-100% - 60px)";
-        resumeShow.innerHTML = '<';
-        articleBash.style.left = "50%";
-        btnShowWorks.style.left = "50%";
-      }
-      $('.resume__show').toggleClass('active');
+    case (responsivePoint > 1.3):
+      console.log(">1.3");
+      console.log(responsivePoint);
+      resumeShow.style.display = "flex";
+      resume.classList.add('resume-tablet');
+      resume.classList.remove('resume-mobile');
+      bash.classList.add('bash-tablet');
+      bash.classList.remove('bash-mobile');
+      btnShowWorks.classList.add('button-mobile');
+      desktop.style.display = "flex";
       break;
     default:
-      alert("Error");
-      alert(responsivePoint);
+      console.log("<1.3");
+      console.log(responsivePoint);
+      resumeShow.style.display = "flex";
+      resume.classList.add('resume-mobile');
+      resume.classList.remove('resume-tablet');
+      if (btnShowWorks.classList.contains('active') == 0) {
+        resume.classList.remove('resume-hide');
+        resume.classList.remove('resume-hide-mobile');
+        resumeShow.classList.remove('active');
+        resumeShow.innerHTML = 'Hide';
+      }else {
+        resume.classList.remove('resume-hide');
+        resume.classList.add('resume-hide-mobile');
+      };
+      bash.classList.add('bash-mobile');
+      bash.classList.remove('bash-tablet');
+      btnShowWorks.classList.add('button-mobile');
+      worksDisplay.style["justify-content"] = "center";
+      desktop.style.display = "none";
       break;
   };
 };
 
+responsive();
+window.addEventListener('resize', function () {
+  responsivePoint = window.innerWidth / window.innerHeight;
+  responsive(); 
+}, true);
+//===================================================//
 
+//showResume
+let showResume = function () {
+  responsivePoint = window.innerWidth / window.innerHeight;
+  if (responsivePoint > 1.3) {
+    if (resumeShow.classList.contains('active')) {
+      resume.classList.remove('resume-hide');
+      resumeShow.innerHTML = 'Hide';
+    } else {
+      resume.classList.add('resume-hide');
+      resumeShow.innerHTML = 'Show';
+    };
+  }else {
+    if (resumeShow.classList.contains('active')) {
+      resume.classList.remove('resume-hide-mobile');
+      resumeShow.innerHTML = 'Hide';
+    } else {
+      resume.classList.add('resume-hide-mobile');
+      resumeShow.innerHTML = 'Show';
+    };
+  };
+  $('.resume__show').toggleClass('active');
+};
+
+resumeShow.onclick = showResume;
+//===================================================//
 
 //showWorks
 let showWorks = function () {
-  switch (true) {
-    case (responsivePoint > 1.7):
-      if (btnShowWorks.classList.contains('active')) {
-        btnShowWorks.innerHTML = "SEE MY WORKS";
-        articleBash.style.top = "6%";
-        articleResume.style.right = "4%";
+  responsivePoint = window.innerWidth / window.innerHeight;
+  if (btnShowWorks.classList.contains('active')) {
+    resumeShow.classList.add('active');
+    resumeShow.innerHTML = "Show"
+    btnShowWorks.innerHTML = "SEE WORKS";
+    bash.style.top = "6%";
+    switch (true) {
+      case (responsivePoint > 1.7):
+        resume.classList.remove('resume-hide');
+        resume.classList.remove('resume-hide-mobile');
         sectionWorks.style.top = "105%";
-      } else {
-        btnShowWorks.innerHTML = "← BACK";
-        articleBash.style.top = "-100%";
-        articleResume.style.right = "-480px";
-        sectionWorks.style.top = "8%";
-      };
-      $('#showWorks').toggleClass('active');
-      break;
-    case (responsivePoint > 1.38):
-      if (btnShowWorks.classList.contains('active')) {
-        btnShowWorks.innerHTML = "SEE MY WORKS";
-        articleBash.style.top = "6%";
-        articleResume.style.right = "-20px";
+        break;
+      case (responsivePoint > 1.3):
+        resume.classList.add('resume-hide');
+        resume.classList.remove('resume-hide-mobile');
         sectionWorks.style.top = "105%";
-      } else {
-        btnShowWorks.innerHTML = "← BACK";
-        articleBash.style.top = "-100%";
-        articleResume.style.right = "-480px";
-        sectionWorks.style.top = "8%";
-      };
-      $('#showWorks').toggleClass('active');
-      break;
-    case (responsivePoint > 0.1):
-      if (btnShowWorks.classList.contains('active')) {
-        btnShowWorks.style.left = "50%";
-        btnShowWorks.innerHTML = "SEE MY WORKS";
-        articleBash.style.top = "6%";
-        articleResume.style.right = "calc(-100% - 60px)";
+        break;
+      default:
         sectionWorks.style.top = "105%";
-      } else {
-        btnShowWorks.style.left = "6%";
-        btnShowWorks.innerHTML = "← BACK";
-        articleBash.style.top = "-100%";
-        articleResume.style.right = "calc(-100% - 100px)";
+        resume.classList.remove('resume-hide');
+        break;
+    };
+  } else {
+    resumeShow.classList.remove('active');
+    btnShowWorks.innerHTML = "← BACK";
+    bash.style.top = "-100%";
+    switch (true) {
+      case (responsivePoint > 1.7):
+        resume.classList.add('resume-hide');
         sectionWorks.style.top = "8%";
-      };
-      $('#showWorks').toggleClass('active');
-      break;
-    default:
-      alert("Error");
-      alert(responsivePoint);
-      break;
+        break;
+      case (responsivePoint > 1.3):
+        resume.classList.add('resume-hide');
+        sectionWorks.style.top = "4%";
+        break;
+      default:
+        resume.classList.add('resume-hide-mobile');
+        sectionWorks.style.top = "4%";
+        break;
+    };
   };
+  $('#showWorks').toggleClass('active');
 };
 
 btnShowWorks.onclick = showWorks;
+//===================================================//
 
 //slyderWorks
 $sliderWork.slick({
@@ -196,11 +203,20 @@ $sliderWork.slick({
   asNavFor: ".works__covers-mobile",
 });
 
+$sliderMobile.slick({
+  arrows: false,
+  asNavFor: ".works__covers"
+});
+//===================================================//
+
+//newTabOpen
 workslink2.on('click', function (e) {
   e.preventDefault();
   window.open(e.target.href, '_blank');
 });
+//===================================================//
 
+//countCurrentWork
 let countCurrentWork = function () {
   for (let i = 0; i < currentWorksArray.length; i++) {
     if (currentWorksArray[i].classList.contains('slick-active')) {
@@ -221,30 +237,46 @@ let changeWorksLink = function () {
 let countWorks = function () {
   worksCount.innerHTML = `${currentWork} / ${$allWorks}`;
 };
+//===================================================//
 
+//frameOpen
 $sliderWork.on("click", ".works__item", function (e) {
   const $index = $(this).data("index");
 
-  $frame.attr("src", websites[$index]);
-  $frame.fadeIn(200);
-});
-
-$sliderWork.on("beforeChange", () => {
-  $frame.fadeOut(400);
-});
-
-$sliderMobile.slick({
-  arrows: false,
-  asNavFor: ".works__covers"
+  desktop.insertAdjacentHTML(
+    "afterbegin",
+    `<iframe src="${websites[$index]}" frameborder="0" class="works__frame"></iframe>`
+  );
 });
 
 $sliderMobile.on("click", ".works__item-mobile", function (e) {
   const $index = $(this).data("index");
 
-  $frameM.attr("src", websites[$index]);
-  $frameM.fadeIn(200);
+  if (responsivePoint <= 1.3) {
+    window.open(`${websites[$index]}`, '_blank');
+  } else {
+    mobile.insertAdjacentHTML(
+      "afterbegin",
+      `<iframe src="${websites[$index]}" frameborder="0" class="works__frame-mobile"></iframe>`
+    );
+  }
+});
+//===================================================//
+
+//frameClose
+$sliderWork.on("beforeChange", () => {
+  const $frame = document.querySelector(".works__frame");
+  if ($frame !== null) {
+    $frame.remove();
+  };
 });
 
 $sliderMobile.on("beforeChange", () => {
-  $frameM.fadeOut(400);
+  const $frameM = document.querySelector(".works__frame-mobile");
+  if (responsivePoint > 1.3) {
+    if ($frameM !== null) {
+      $frameM.remove();
+    };
+  }
 });
+//===================================================//

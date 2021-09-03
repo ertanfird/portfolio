@@ -13,7 +13,7 @@
     left: 50%;
     transform: translateX(-50%);
     display: flex;
-    animation: movingLogo 2.2s ease-out forwards;
+    animation: movingLogo 2.2s ease forwards;
   }
   &__picture {
     width: 62px;

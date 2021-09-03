@@ -12,7 +12,8 @@
   background: linear-gradient(160.01deg, rgba(255, 253, 253, 0.03) 0%, rgba(0, 0, 0, 0.4) 97.51%);
   box-shadow: inset -20px -20px 100px 20px rgba(255, 255, 255, 0.62);
   color: $color-wh;
-  transition: all ease-in 0.48s;
+  transition: all $animation;
+  backdrop-filter: blur(2px);
   &::before {
     display: table;
     z-index: 1;
@@ -28,7 +29,7 @@
     font-weight: 600;
     line-height: 96%;
     text-align: justify;
-    animation: gradient 6s ease infinite;
+    // animation: gradient 6s ease infinite;
     content: "DEV ELO PER";
     word-wrap: break-word;
     -webkit-text-fill-color: transparent;
@@ -48,6 +49,12 @@
     height: calc(100% + 40px);
     border-radius: 0;
   }
+  &-hide {
+    right: -440px;
+  }
+  &-hide-mobile {
+    right: calc(-100% - 60px);
+  }
   &__show {
     display: flex;
     position: absolute;
@@ -55,15 +62,18 @@
     left: 0;
     align-items: center;
     justify-content: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 0 50% 50% 0;
+    width: 89px;
+    height: 48px;
+    border-radius: 0 22px 22px 0;
     background: linear-gradient(160.01deg, rgba(255, 253, 253, 0.03) 0%, rgba(0, 0, 0, 0.28) 97.51%);
     font-size: 24px;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
     transition: all ease 0.3s;
     &.active {
-      left: -40px;
-      border-radius: 50% 0 0 50%;
+      left: -89px;
+      border-radius: 22px 0 0 22px;
     }
   }
   &__shadow {
@@ -99,8 +109,7 @@
   }
   &__photo {
     border-radius: 12px;
-    backdrop-filter: blur(10px);
-    background: rgba(199, 199, 199, 0.2);
+    background: #c7c7c7;
   }
   &__about {
     display: flex;

@@ -11,11 +11,28 @@
   box-shadow: 4px 3px 35px 0px rgba(0,0,0,0.71);
   color: $color-wh;
   transition: all $animation;
-  @include tablet {
+  &-tablet {
     left: 50%;
   }
-  @include mobile {
-    width: 100%;
+  &-mobile {
+    width: calc(100% - 40px);
+    left: 50%;
+  }
+  &.active {
+    top: -100%;
+  }
+  &-blue {
+    color: #0070bb;
+  }
+  &-green {
+    color: #00bb6d;
+  }
+  &-red {
+    color: #ce1818;
+  }
+  &-yellow {
+    color: #030c14;
+    background-color: #aebb00;
   }
   &__tabs {
     display: flex;
@@ -34,18 +51,19 @@
     letter-spacing: 1.6;
     text-align: justify;
     word-wrap: break-word;
+    height: 328px;
+    overflow: auto;
   }
-  &__textarea {
-    width: 60%;
-    height: 16px;
+  &__input {
+    width: auto;
+    height: $font-standart;
     border: none;
     background-color: $color-theme;
     color: $color-wh;
     font-family: "Roboto";
-    font-size: 16px;
-    resize: none;
+    font-size: $font-standart;
   }
-  &__textarea:focus {
+  &__input:focus {
     border: none;
     outline: none;
   }

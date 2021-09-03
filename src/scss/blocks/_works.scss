@@ -4,15 +4,15 @@
   top: 105%;
   flex-direction: column;
   width: 100%;
-  min-height: 90%;
   height: 90%;
-  transition: all $animation;;
+  min-height: 90%;
+  transition: all $animation;
   &__display {
     display: flex;
     position: relative;
-    height: 100%;
     align-items: center;
     justify-content: space-around;
+    height: 100%;
     padding: 20px;
   }
   &__desktop {
@@ -27,9 +27,7 @@
     background: $color-theme;
     background-size: contain;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.75);
-    @include mobile {
-      display: none;
-    }
+    transition: all $animation;
   }
   &__header {
     display: flex;
@@ -71,7 +69,6 @@
     }
   }
   &__frame {
-    display: none;
     z-index: 4;
     position: absolute;
     top: calc(-50% + 49px);
@@ -82,13 +79,13 @@
     border-radius: 0 0 44px 44px;
     background: $color-wh;
     &-mobile {
-      display: none;
       z-index: 4;
       position: absolute;
       width: 178%;
       height: 190%;
-      border-radius: 60px;
       transform: scale(0.5);
+      border-radius: 60px;
+      background: $color-wh;
     }
   }
   &__covers {
@@ -147,8 +144,8 @@
     width: 30vh;
   }
   &__text {
-    margin: 38px 0;
     width: 50%;
+    margin: 38px 0;
     &-mobile {
       width: 100%;
     }
@@ -192,6 +189,7 @@
   }
   &__mobile {
     display: flex;
+    z-index: 4;
     position: relative;
     align-items: center;
     justify-content: center;
@@ -201,18 +199,19 @@
     border-radius: 44px;
     background-color: $color-theme;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.75);
-    z-index: 3;
+    transition: all $animation;
     @include tablet {
       position: absolute;
       right: 4%;
     }
     @include mobile {
       position: relative;
+      right: inherit;
     }
     &::before {
       z-index: 9999;
       position: absolute;
-      top: 14px;
+      top: 13px;
       left: 50%;
       width: 100px;
       height: 14px;
@@ -235,8 +234,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 8vh;
-    height: 8vh;
+    width: 20px;
+    height: 20px;
     padding: 5px;
     border-radius: 50%;
     background: rgba(221,221,221, 0.0);
