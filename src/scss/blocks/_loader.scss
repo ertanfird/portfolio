@@ -13,7 +13,7 @@
     left: 50%;
     transform: translateX(-50%);
     display: flex;
-    animation: movingLogo 2.2s ease forwards;
+    animation: movingLogo 2.2s forwards;
   }
   &__picture {
     width: 62px;
@@ -23,7 +23,7 @@
     width: 200px;
     object-fit: cover;
     opacity: 0;
-    animation: animationSignature 4.8s ease-out forwards;
+    animation: animationSignature 4.8s forwards;
   }
 }
 

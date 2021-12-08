@@ -13,15 +13,23 @@
 <body>
   <div id="loader" class="loader">
     <div class="loader__logo">
-      <img src="./img/loader-picture.png"  alt="Ertan" class="loader__picture"></img>
-      <img src="./img/loader-signature.png"  alt="Fird" class="loader__signature"></img>
+      <img src="./img/loader-picture.png" alt="Ertan" class="loader__picture"></img>
+      <img src="./img/loader-signature.png" alt="Fird" class="loader__signature"></img>
     </div>
   </div>
   <div id="particles-js"></div>
   <div class="wrapper">
     <article class="bash">
-      <div class="bash__tabs">
-        <div class="bash__tab">about.sh</div>
+      <div class="bash__header">
+        <div class="bash__tittle">
+          <img src="./img/bash.png" alt="BASH" class="bash__logo">
+          <span>Bash</span>
+        </div>
+        <div class="bash__buttons">
+          <div class="bash__circle"></div>
+          <div class="bash__circle"></div>
+          <div class="bash__circle"></div>
+        </div>
       </div>
       <div class="bash__console">
         <div class="bash__comand">
@@ -43,45 +51,44 @@
             <div class="bash__paragraph bash-red">Webpack</div>
             <div class="bash__paragraph bash-red">Figma</div>
             <div class="bash__paragraph bash-red">Wordpress</div>
+            <div class="bash__paragraph bash-red">Linux</div>
             <br>
             <br>
             <div class="bash__paragraph">Added 5 works, push 'see works' for see my works.</div>
           </div>
-          <div class="bash__catalog">
+          <form class="bash__catalog" id="bashForm">
             <span class="bash-green">ertanfird@Work-PC</span>
             <span>:</span>
             <span class="bash-blue">~</span>
             <span>$</span>
-            <input class="bash__input" name="bashInput" id="bashInput"></input>
-          </div>
+            <input type="text" class="bash__input" name="bashInput" id="bashInput"></input>
+          </form>
         </div>
       </div>
     </article>
     <button class="button" id="showWorks">See works</button>
     <article class="resume">
+      <div class="resume__signature">Frontend</div>
       <div class="resume__item">
-        <div class="resume__signature">Frontend</div>
-      </div>
-      <div class="resume__item">
-        <p class="resume__title">
-          Nikita N,<br>
-          20 years old
-        </p>
+
+        Nikita N<br>
+        20 years old
+
         <img src="./img/resume 1.png" alt="ME" class="resume__photo">
       </div>
       <div class="resume__item">
-        <p class="resume__title">
-          Frontend<br>
-          JS Developer<br>
-          Level skill - junior
-        </p>
+
+        Frontend<br>
+        JS Developer<br>
+        Level skill - junior<br>
+
       </div>
       <div class="resume__item">
-        <p class="resume__about">
-          My main specialty is sysadmin, but I took a front-end bias and learned on my own. I treat each project like a
-          sculpture, grinding out all its facets, I create something new and unusual, something that delights the site
-          visitors.
-        </p>
+
+        My main specialty is sysadmin, but I took a front-end bias and learned on my own. I treat each project like a
+        sculpture, grinding out all its facets, I create something new and unusual, something that delights the site
+        visitors.
+
       </div>
       <div class="resume__show">Hide</div>
       <div class="resume__shadow"></div>
@@ -99,43 +106,52 @@
               <div class="works__description">
                 <img src="img/logo-1.png" class="works__logo" alt="Mirror">
                 <div class="works__text">
-                  Стартап провайдера спутникового интернета (только Frontend)
+                  Satellite Internet provider startup (Frontend only)
                 </div>
                 <button class="works__start">Start</button>
               </div>
             </div>
-            <div class="works__item  works__item-12" data-index="1">
+            <div class="works__item  works__item-11" data-index="1">
+              <div class="works__description">
+                <img src="img/logo-11.png" class="works__logo" alt="baSalt">
+                <div class="works__text">
+                  Password generator with hash salting algorithm
+                </div>
+                <button class="works__start">Start</button>
+              </div>
+            </div>
+            <div class="works__item  works__item-12" data-index="2">
               <div class="works__description">
                 <img src="img/logo-12.png" class="works__logo" alt="North-crimea">
                 <div class="works__text">
-                  My first commercial order. Site from A to Z.
+                  My first commercial order. Site from A to Z
                 </div>
                 <button class="works__start">Start</button>
               </div>
             </div>
-            <div class="works__item works__item-13" data-index="2">
+            <div class="works__item works__item-13" data-index="3">
               <div class="works__description">
                 <img src="img/logo-13.png" class="works__logo" alt="">
                 <div class="works__text">
-                  Лендинг магазина брендовой одежды.
+                  Brand clothing store landing page
                 </div>
                 <button class="works__start">Start</button>
               </div>
             </div>
-            <div class="works__item works__item-14" data-index="3">
+            <div class="works__item works__item-14" data-index="4">
               <div class="works__description">
                 <img src="img/logo-14.png" class="works__logo" alt="">
                 <div class="works__text">
-                  Сайт-лендинг булочной, пекарни, кафе и т.д.
+                  Website landing page for a bakery, bakery, cafe, etc.
                 </div>
                 <button class="works__start">Start</button>
               </div>
             </div>
-            <div class="works__item works__item-15" data-index="4">
+            <div class="works__item works__item-15" data-index="5">
               <div class="works__description">
                 <img src="img/logo-15.png" class="works__logo" alt="">
                 <div class="works__text">
-                  Умный ежедневник, помогающий грамотно распределять время, находится на стадии разработки
+                  A smart daily planner that helps you manage your time wisely. Under development
                 </div>
                 <button class="works__start">Start</button>
               </div>
@@ -148,12 +164,21 @@
               <div class="works__description works__description-mobile">
                 <img src="img/logo-1.png" class="works__logo" alt="">
                 <div class="works__text-mobile">
-                  Стартап провайдера спутникового интернета. (только Frontend)
+                  Satellite Internet provider startup (Frontend only)
                 </div>
                 <button class="works__start">Start</button>
               </div>
             </div>
-            <div class="works__item-mobile works__item-12" data-index="1">
+            <div class="works__item-mobile works__item-11" data-index="1">
+              <div class="works__description works__description-mobile">
+                <img src="img/logo-11.png" class="works__logo" alt="">
+                <div class="works__text-mobile">
+                  Password generator with hash salting algorithm
+                </div>
+                <button class="works__start">Start</button>
+              </div>
+            </div>
+            <div class="works__item-mobile works__item-12" data-index="2">
               <div class="works__description works__description-mobile">
                 <img src="img/logo-12.png" class="works__logo" alt="">
                 <div class="works__text-mobile">
@@ -162,29 +187,29 @@
                 <button class="works__start">Start</button>
               </div>
             </div>
-            <div class="works__item-mobile works__item-13" data-index="2">
+            <div class="works__item-mobile works__item-13" data-index="3">
               <div class="works__description works__description-mobile">
                 <img src="img/logo-13.png" class="works__logo" alt="">
                 <div class="works__text-mobile">
-                  Лендинг магазина брендовой одежды
+                  Brand clothing store landing page
                 </div>
                 <button class="works__start">Start</button>
               </div>
             </div>
-            <div class="works__item-mobile works__item-14" data-index="3">
+            <div class="works__item-mobile works__item-14" data-index="4">
               <div class="works__description works__description-mobile">
                 <img src="img/logo-14.png" class="works__logo" alt="">
                 <div class="works__text-mobile">
-                  Сайт-лендинг булочной, пекарни, кафе и т.д.
+                  Website landing page for a bakery, bakery, cafe, etc.
                 </div>
                 <button class="works__start">Start</button>
               </div>
             </div>
-            <div class="works__item-mobile works__item-15" data-index="4">
+            <div class="works__item-mobile works__item-15" data-index="5">
               <div class="works__description works__description-mobile">
                 <img src="img/logo-15.png" class="works__logo" alt="">
                 <div class="works__text-mobile">
-                  Умный ежедневник, помогающий грамотно распределять время, находится на стадии разработки
+                  A smart daily planner that helps you manage your time wisely. Under development
                 </div>
                 <button class="works__start">Start</button>
               </div>

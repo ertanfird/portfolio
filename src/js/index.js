@@ -12,33 +12,36 @@ import './vendor/particles';
 //variables
 global.jQuery = $;
 global.$ = $;
-//variables
+let responsivePoint = window.innerWidth / window.innerHeight;
+
+const resume = document.querySelector('.resume');
+const resumeShow = document.querySelector('.resume__show');
 const btnShowWorks = document.querySelector('#showWorks');
 const bash = document.querySelector('.bash');
+const bashInput = document.querySelector('.bash__input');
+
 const sectionWorks = document.querySelector('.works');
+const desktop = document.querySelector('.works__desktop');
+const mobile = document.querySelector('.works__mobile');
+const worksDisplay = document.querySelector('.works__display');
+const workslink = document.querySelector('#worksLink');
+const workslink2 = $('#worksLink');
+const worksCount = document.querySelector('#countWorks');
+const $sliderWork = $(".works__covers");
+const $sliderMobile = $(".works__covers-mobile");
 const websites = [
   "https://mirror-test.000webhostapp.com/index.php",
+  "https://ertanfird.github.io/basalt/",
   "https://north-crimea.ru",
   "https://ertanfird.github.io/porten/",
   "https://ertanfird.github.io/tastyshop/",
   "https://ironman-test.000webhostapp.com/"
 ];
-const $sliderWork = $(".works__covers");
-const $sliderMobile = $(".works__covers-mobile");
-let currentWorksArray = document.querySelectorAll('.works__item');
-const worksCount = document.querySelector('#countWorks');
 let $allWorks = String(websites.length);
 let currentWork;
 let currentWorkLink;
 let $workArrow = $('.works__arrow');
-const workslink = document.querySelector('#worksLink');
-const workslink2 = $('#worksLink');
-const desktop = document.querySelector('.works__desktop');
-const mobile = document.querySelector('.works__mobile');
-const worksDisplay = document.querySelector('.works__display');
-let responsivePoint = window.innerWidth / window.innerHeight;
-const resume = document.querySelector('.resume');
-const resumeShow = document.querySelector('.resume__show');
+let currentWorksArray = document.querySelectorAll('.works__item');
 //===================================================//
 
 //ЗАГРУЗКА
@@ -64,15 +67,14 @@ let responsive = function () {
   switch (true) {
     case (responsivePoint > 1.7):
       resumeShow.style.display = "none";
-      resume.classList.remove('resume-mobile');
-      resume.classList.remove('resume-tablet');
+      resume.className = "resume";
       if (btnShowWorks.classList.contains('active') == 0) {
         resume.classList.remove('resume-hide');
         resume.classList.remove('resume-hide-mobile');
       };
-      bash.classList.remove('bash-mobile');
-      bash.classList.remove('bash-tablet');
-      btnShowWorks.classList.remove('button-mobile');
+      bash.className = "bash";
+      bashInput.className = "bash__input";
+      btnShowWorks.className = "button";
       desktop.style.display = "flex";
       worksDisplay.style["justify-content"] = "space-around";
       particlesJS('particles-js', require('./particles.json'));
@@ -81,30 +83,25 @@ let responsive = function () {
       console.log(">1.3");
       console.log(responsivePoint);
       resumeShow.style.display = "flex";
-      resume.classList.add('resume-tablet');
-      resume.classList.remove('resume-mobile');
-      bash.classList.add('bash-tablet');
-      bash.classList.remove('bash-mobile');
-      btnShowWorks.classList.add('button-mobile');
+      resume.className = "resume resume-tablet";
+      bash.className = "bash bash-tablet";
+      bashInput.className = "bash__input";
+      btnShowWorks.className = "button button-mobile";
       desktop.style.display = "flex";
       break;
     default:
       console.log("<1.3");
       console.log(responsivePoint);
       resumeShow.style.display = "flex";
-      resume.classList.add('resume-mobile');
-      resume.classList.remove('resume-tablet');
+      resume.className = "resume resume-mobile";
       if (btnShowWorks.classList.contains('active') == 0) {
-        resume.classList.remove('resume-hide');
-        resume.classList.remove('resume-hide-mobile');
-        resumeShow.classList.remove('active');
+        resumeShow.className = "resume__show";
         resumeShow.innerHTML = 'Hide';
       }else {
-        resume.classList.remove('resume-hide');
-        resume.classList.add('resume-hide-mobile');
+        resume.className = "resume resume-hide-mobile";
       };
-      bash.classList.add('bash-mobile');
-      bash.classList.remove('bash-tablet');
+      bash.className = "bash bash-mobile";
+      bashInput.className = "bash__input bash__input-mobile";
       btnShowWorks.classList.add('button-mobile');
       worksDisplay.style["justify-content"] = "center";
       desktop.style.display = "none";
@@ -122,24 +119,37 @@ window.addEventListener('resize', function () {
 //showResume
 let showResume = function () {
   responsivePoint = window.innerWidth / window.innerHeight;
-  if (responsivePoint > 1.3) {
+  if (responsivePoint > 1.7) {
     if (resumeShow.classList.contains('active')) {
-      resume.classList.remove('resume-hide');
+      resume.className = "resume";
+      resumeShow.className = "resume__show";
       resumeShow.innerHTML = 'Hide';
     } else {
-      resume.classList.add('resume-hide');
+      resume.className = "resume resume-hide";
+      resumeShow.className = "resume__show active";
+      resumeShow.innerHTML = 'Show';
+    };
+  }else if (responsivePoint > 1.3) {
+    if (resumeShow.classList.contains('active')) {
+      resume.className = "resume resume-tablet";
+      resumeShow.className = "resume__show";
+      resumeShow.innerHTML = 'Hide';
+    } else {
+      resume.className = "resume resume-tablet resume-hide-tablet";
+      resumeShow.className = "resume__show active";
       resumeShow.innerHTML = 'Show';
     };
   }else {
     if (resumeShow.classList.contains('active')) {
-      resume.classList.remove('resume-hide-mobile');
+      resume.className = "resume resume-mobile";
+      resumeShow.className = "resume__show";
       resumeShow.innerHTML = 'Hide';
     } else {
-      resume.classList.add('resume-hide-mobile');
+      resume.className = "resume resume-mobile resume-hide-mobile";
+      resumeShow.className = "resume__show active";
       resumeShow.innerHTML = 'Show';
     };
   };
-  $('.resume__show').toggleClass('active');
 };
 
 resumeShow.onclick = showResume;
@@ -156,17 +166,20 @@ let showWorks = function () {
     switch (true) {
       case (responsivePoint > 1.7):
         resume.classList.remove('resume-hide');
+        resume.classList.remove('resume-hide-tablet');
         resume.classList.remove('resume-hide-mobile');
         sectionWorks.style.top = "105%";
         break;
       case (responsivePoint > 1.3):
-        resume.classList.add('resume-hide');
+        resume.classList.add('resume-hide-tablet');
+        resume.classList.remove('resume-hide');
         resume.classList.remove('resume-hide-mobile');
         sectionWorks.style.top = "105%";
         break;
       default:
         sectionWorks.style.top = "105%";
         resume.classList.remove('resume-hide');
+        resume.classList.remove('resume-hide-tablet');
         break;
     };
   } else {
@@ -179,7 +192,7 @@ let showWorks = function () {
         sectionWorks.style.top = "8%";
         break;
       case (responsivePoint > 1.3):
-        resume.classList.add('resume-hide');
+        resume.classList.add('resume-hide-tablet');
         sectionWorks.style.top = "4%";
         break;
       default:
@@ -192,6 +205,15 @@ let showWorks = function () {
 };
 
 btnShowWorks.onclick = showWorks;
+$("#bashForm").on('submit', function (e) {
+  e.preventDefault();
+  if (bashInput.value == "see works") {
+    showWorks();
+  } else {
+    alert("Incorrect value,  please push 'see works'");
+  }
+  
+});
 //===================================================//
 
 //slyderWorks

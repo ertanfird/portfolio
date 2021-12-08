@@ -14,7 +14,7 @@
   font-size: 18px;
   text-transform: uppercase;
   cursor: pointer;
-  transition: all $animation;
+  transition: top $animation, left $animation;
   &-mobile {
     left: 50%;
   }
