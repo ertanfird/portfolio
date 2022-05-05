@@ -1,0 +1,115 @@
+.bash{
+  position: absolute;
+  top: 6%;
+  left: 28%;
+  width: 600px;
+  height: 360px;
+  overflow: hidden;
+  transform: translateX(-50%);
+  border-radius: 22px;
+  background-color: $color-theme;
+  box-shadow: 4px 3px 35px 0px rgba(0,0,0,0.71);
+  color: $color-wh;
+  transition: top $animation;
+  &-tablet {
+    left: 50%;
+  }
+  &-mobile {
+    width: calc(100% - 20px);
+    left: 50%;
+  }
+  &.active {
+    top: -100%;
+  }
+  &-blue {
+    color: #0070bb;
+  }
+  &-green {
+    color: #00bb6d;
+  }
+  &-red {
+    color: #ce1818;
+  }
+  &-yellow {
+    color: #030c14;
+    background-color: #aebb00;
+  }
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    border-bottom: 1px solid #121b24;
+  }
+  &__tittle {
+    padding: 6px 15px;
+    font-size: 16px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    & span {
+      margin-left: 6px;
+    }
+  }
+  &__logo {
+    width: 16px;
+    height: 16px;
+  }
+  &__buttons {
+    padding: 6px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__circle {
+    width: 16px;
+    height: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin-left: 6px;
+    background: #c7c7c7;
+    &:last-child {
+      background: #ce1818;
+    }
+  }
+  &__console {
+    margin: 8px;
+  }
+  &__comand {
+    letter-spacing: 1.6;
+    text-align: justify;
+    word-wrap: break-word;
+    height: 328px;
+    overflow: auto;
+    position: relative;
+  }
+  &__paragraph::selection {
+      background: $color-wh;
+      color: #000000;
+  }
+  &__catalog {
+    width: 100%;
+    display: flex;
+    & span {
+      width: max-content;
+    }
+  }
+  &__input {
+    height: $font-standart;
+    border: none;
+    background-color: transparent;
+    color: $color-wh;
+    font-family: "Roboto";
+    font-size: $font-standart;
+    display: flex;
+    flex-grow: 1;
+    &:focus {
+      border: none;
+      outline: none;
+    }
+    &-mobile {
+      max-width: 38%;
+    }
+  }
+}
