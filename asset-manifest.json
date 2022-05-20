@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/portfolio/static/css/main.d9d77698.css",
+    "main.js": "/portfolio/static/js/main.28a71456.js",
+    "static/media/ironmanScreen.png": "/portfolio/static/media/ironmanScreen.b6ae05d009d4e0833aac.png",
+    "static/media/basaltScreen.png": "/portfolio/static/media/basaltScreen.ac8ceb8a5fd6b6cfc2e0.png",
+    "static/media/northCrimeaScreen.png": "/portfolio/static/media/northCrimeaScreen.335c6b904e5bfddc4364.png",
+    "static/media/aquamarineScreen.png": "/portfolio/static/media/aquamarineScreen.30241bf905ecaf9e65f4.png",
+    "static/media/memoGameScreen.png": "/portfolio/static/media/memoGameScreen.2b18873960fce617520c.png",
+    "static/media/Hack-Regular.ttf": "/portfolio/static/media/Hack-Regular.f2412cb7f3af2d1a6db0.ttf",
+    "static/media/mirrorScreen.png": "/portfolio/static/media/mirrorScreen.d27c419219f5011d2b2c.png",
+    "static/media/Subtract.webp": "/portfolio/static/media/Subtract.688dfac82af0a9b6818e.webp",
+    "static/media/basaltLogo.png": "/portfolio/static/media/basaltLogo.a07493d5296d0bc8990d.png",
+    "static/media/aquamarineLogo.png": "/portfolio/static/media/aquamarineLogo.38c5fea7d8b2f96a3351.png",
+    "static/media/mirrorLogo.png": "/portfolio/static/media/mirrorLogo.c4ebbf0af5ca2d6151d1.png",
+    "static/media/MrDafoe-Regular.ttf": "/portfolio/static/media/MrDafoe-Regular.7cb484b7c593238242ae.ttf",
+    "static/media/ironmanLogo.png": "/portfolio/static/media/ironmanLogo.3cef6766a7c5429c2ec5.png",
+    "static/media/bash.png": "/portfolio/static/media/bash.fc901af89ba6dbbec131.png",
+    "static/media/northCrimeaLogo.png": "/portfolio/static/media/northCrimeaLogo.e73c62084856dd708460.png",
+    "index.html": "/portfolio/index.html",
+    "static/media/memoGameLogo.png": "/portfolio/static/media/memoGameLogo.aa9cabd53289d5711436.png",
+    "static/media/cms.svg": "/portfolio/static/media/cms.7f85994d5bca005d9bca8ce78ffa8534.svg",
+    "static/media/react.svg": "/portfolio/static/media/react.800a77758994498509519d02fa6af43a.svg",
+    "static/media/landing.svg": "/portfolio/static/media/landing.46c9e024f341c9b027a3bada3e735a4a.svg",
+    "static/media/webdesign.svg": "/portfolio/static/media/webdesign.f152690156696cbf9153801b032a8c77.svg",
+    "main.d9d77698.css.map": "/portfolio/static/css/main.d9d77698.css.map",
+    "main.28a71456.js.map": "/portfolio/static/js/main.28a71456.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d9d77698.css",
+    "static/js/main.28a71456.js"
+  ]
+}
