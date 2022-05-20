@@ -1,0 +1,63 @@
+.resume
+    width: 440px
+    height: 400px
+    background: linear-gradient(160.01deg, rgba(255, 253, 253, 0.03) 0%, rgba(0, 0, 0, 0.28) 97.51%)
+    color: $color-white
+    display: flex
+    align-items: center
+    backdrop-filter: blur(2px)
+    position: absolute
+    box-shadow: inset -1px -1px 2px rgba(0, 0, 0, 0.24), inset 1px 1px 0px #FFFFFF, inset -20px -20px 100px 20px rgba(255, 255, 255, 0.62)
+    border-radius: 22px
+    padding: 20px 32px
+    margin-top: 80px
+    font-size: 16px
+    font-weight: 500
+
+    @include largeTablet
+        margin-left: -300px
+
+    @include smallTablet
+        margin-left: 0
+        width: 80%
+
+    @include largeMobile
+        width: 100%
+
+    &::after
+        position: absolute
+        content: ''
+        background: url('../../assets/img/Subtract.webp') no-repeat
+        background-size: contain
+        width: 390px
+        height: 540px
+        bottom: -20px
+        left: 75%
+        z-index: 2
+
+        @include smallTablet
+            bottom: auto
+            top: -40%
+            left: 49%
+            transform: translateX(-50%)
+            height: 270px
+            width: 185px
+
+    &::before
+        position: absolute
+        bottom: -20px
+        left: 75%
+        content: ''
+        z-index: 0
+        width: 420px
+        height: 420px
+        border-radius: 50%
+        background: linear-gradient(257.6deg, #B5BCC6 8.79%, rgba(181, 188, 198, 0) 88.79%)
+
+        @include smallTablet
+            bottom: auto
+            top: -35%
+            left: 50%
+            transform: translateX(-50%)
+            height: 230px
+            width: 230px

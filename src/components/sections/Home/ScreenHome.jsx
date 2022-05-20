@@ -1,12 +1,12 @@
 import React from 'react';
+import YearsOld from './YearsOld';
 
-const ScreenHome = ({}) => {
-    return (
-        <div className='screen' id="Home">
+const ScreenHome = React.forwardRef((props, ref ) => (
+        <div className='screen' id="Home" ref={ref}>
             <div className='resume'>
                 <div>
                     Nikita N<br/>
-                    20 years old<br/>
+                    <YearsOld /> years old<br/>
                     <br/>
                     Frontend<br/>
                     JS Developer<br/>
@@ -18,7 +18,6 @@ const ScreenHome = ({}) => {
                 </div>
             </div>
         </div>
-    );
-}
+    ));
 
 export default ScreenHome;

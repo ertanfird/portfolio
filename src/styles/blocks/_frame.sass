@@ -1,0 +1,127 @@
+.frame
+    width: 780px
+    height: 100%
+    background: white
+    border-radius: 22px
+    position: relative
+    box-shadow: 11px 12px 15px rgba(0, 0, 0, 0.25)
+    flex-shrink: 0
+    overflow: hidden
+
+    @include tablet
+        width: 80vw
+        box-shadow: none
+
+    @include largeMobile
+        width: 70vw
+
+    @include mobile
+        width: 82vw
+
+    & + &
+        margin-left: 28px
+
+        @include largeMobile
+            margin-left: 16px
+
+    &__header
+        display: flex
+        align-items: center
+        justify-content: center
+        width: 100%
+        height: 36px
+        border-radius: 22px 22px 0 0
+        background: $color-white-search
+
+        @include smallTablet
+            display: none
+
+    &__search
+        display: flex
+        position: relative
+        align-items: center
+        justify-content: center
+        width: 80%
+        height: 22px
+        border-radius: 4px
+        background: $color-gray-search
+
+        &::after
+            position: absolute
+            top: 50%
+            left: 20px
+            width: 8px
+            height: 8px
+            transform: translateY(-50%)
+            border-radius: 50%
+            background: $color-green
+            content: ""
+
+    &__link
+        color: $color-gray
+        font-size: 12px
+        letter-spacing: 1.4px
+        text-decoration: none
+        &:hover
+            text-decoration: underline
+
+    &__body
+        height: calc(100% - 36px)
+        width: 100%
+        border-radius: 0 0 22px 22px
+        background: $color-blue-light
+        color: $color-white
+        position: relative
+        overflow: hidden
+
+        @include tablet
+            height: 100%
+
+    &__picture
+        position: absolute
+        top: 0
+        left: 0
+        height: 100%
+        width: 100%
+        z-index: 0
+        object-fit: cover
+
+    &__inner
+        z-index: 2
+        position: relative
+        height: 100%
+        width: 100%
+        display: flex
+        flex-direction: column
+        justify-content: space-around
+        padding: 40px
+
+        @include largeMobile
+            align-items: center
+
+    &__logo
+        //height: 78px
+        width: 200px
+
+    &__description
+        max-width: 400px
+
+    &__btn
+        width: fit-content
+        padding: 6px 18px
+        border: none
+        background: $color-white
+        border-radius: 8px
+        font-size: 16px
+        color: $color-black
+        text-decoration: none
+        cursor: pointer
+
+    &__iframe
+        position: absolute
+        z-index: 1
+        top: 0
+        left: 0
+        height: 100%
+        width: 100%
+        display: none

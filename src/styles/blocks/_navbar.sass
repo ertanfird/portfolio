@@ -1,0 +1,76 @@
+.navbar
+    bottom: 50%
+    left: -200px
+    position: fixed
+    transform: translate(0, 50%)
+    z-index: 9999
+    display: flex
+    flex-direction: column
+
+    @include tablet
+        flex-direction: row
+        bottom: 0
+        left: 50%
+        transform: translate(-50%, 0)
+
+    &__btn
+        width: 267px
+        padding: 12px 18px
+        border-radius: 0 60px 60px 0
+        color: $color-white
+        display: flex
+        justify-content: space-between
+        align-items: center
+        font-size: 24px
+        position: relative
+        transform: translateX(0px)
+        transition: transform ease 0.28s
+        cursor: pointer
+
+        @include tablet
+            width: 62px
+            border-radius: 60px 60px 0 0
+            justify-content: center
+
+        &:hover
+            transform: translateX(200px)
+
+            @include largeTablet
+                transform: translateX(0)
+
+        &.long
+            transform: translateX(200px)
+
+            @include largeTablet
+                transform: translateX(0)
+
+        &-home
+            background: $color-home
+
+        &-skills
+            background: $color-skills
+
+        &-projects
+            background: $color-projects
+
+        &-price
+            background: $color-price
+
+    &__btn + &__btn
+        margin-top: 20px
+
+        @include tablet
+            margin-top: 0
+            margin-left: 20px
+
+    &__title
+        @include tablet
+            display: none
+
+    &__icon
+        width: 40px
+        height: 40px
+        padding: 8px
+        border-radius: 50%
+        border: 1px solid rgba(0,0,0, 0.12)
+        box-shadow: 0px -5px 14px rgba(255, 255, 255, 0.22), 0px 7px 14px rgba(0, 0, 0, 0.25)

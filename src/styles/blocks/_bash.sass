@@ -1,0 +1,119 @@
+.bash
+    width: 600px
+    height: 360px
+    background: $color-black
+    position: relative
+    margin-left: 380px
+    border-radius: 22px
+    color: $color-white
+    box-shadow: 11px 12px 15px rgba(0, 0, 0, 0.25)
+    overflow: hidden
+
+    @include largeTablet
+        margin-left: 0
+
+    @include smallTablet
+        width: 80%
+        margin: 0 20px
+
+    @include largeMobile
+        margin: 0
+        width: 100%
+
+    &__header
+        padding: 8px 15px
+        border-bottom: 1px solid $color-gray
+        display: flex
+        justify-content: space-between
+        align-items: center
+        z-index: 2
+
+    &__title
+        display: flex
+        align-items: center
+
+    &__logo
+        background: url('../../assets/img/bash.png')
+        background-size: contain
+        width: 20px
+        height: 20px
+        margin-right: 8px
+
+    &__buttons
+        display: flex
+
+    &__circle
+        height: 16px
+        width: 16px
+        border-radius: 50%
+        background: $color-gray-light
+
+        &:nth-child(3)
+            background: $color-red
+
+        & + &
+            margin-left: 10px
+
+    &__console
+        position: absolute
+        padding: 12px
+        overflow-y: scroll
+        width: 100%
+        min-height: calc(100% - 38px)
+        max-height: calc(100% - 38px)
+        height: auto
+        bottom: 0
+        //letter-spacing: 2px
+        display: flex
+        flex-direction: column
+        font-family: "Hack"
+
+        &::-webkit-scrollbar
+            width: 12px
+            background-color: $color-black
+
+        &::-webkit-scrollbar-thumb
+            background-color: $color-gray
+            border-radius: 9em
+            border: 3px solid $color-black
+
+
+    &__item
+        display: flex
+        justify-content: flex-start
+        margin-bottom: 10px
+
+    &__ascii
+        font-size: 8px
+        display: flex
+        flex-direction: column
+
+    &__directory
+        max-width: 100%
+        width: 56%
+        height: 22px
+        line-height: 22px
+
+    &__span
+        min-width: 40%
+        width: 100%
+        &-green
+            color: $color-green
+        &-blue
+            color: $color-blue
+    &__input
+        height: 22px
+        min-width: 40%
+        width: 100%
+        background: transparent
+        border: none
+        font-size: 16px
+        letter-spacing: inherit
+        color: $color-white
+        line-height: 22px
+
+    &__skills
+        display: flex
+        flex-direction: column
+    &__skill
+        width: 100%

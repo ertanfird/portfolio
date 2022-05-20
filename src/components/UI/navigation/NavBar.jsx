@@ -2,13 +2,14 @@ import React from 'react';
 import NavButton from './NavButton';
 import './NavBar.module.sass';
 
-const NavBar = ({}) => {
+const NavBar = ({long, media}) => {
+    const sections = ["Home", "Skills", "Projects", "Price"];
+
     return (
         <div className='navbar'>
-            <NavButton name="Home"/>
-            <NavButton name="Skills"/>
-            <NavButton name="Projects"/>
-            <NavButton name="Price"/>
+            {sections.map((name) =>
+                <NavButton name={name} long={long} media={media} key={name}/>
+            )}
         </div>
     );
 }
