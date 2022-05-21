@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.d9d77698.css",
-    "main.js": "/portfolio/static/js/main.28a71456.js",
+    "main.css": "/portfolio/static/css/main.1f3ca5e1.css",
+    "main.js": "/portfolio/static/js/main.e4b411b0.js",
     "static/media/ironmanScreen.png": "/portfolio/static/media/ironmanScreen.b6ae05d009d4e0833aac.png",
     "static/media/basaltScreen.png": "/portfolio/static/media/basaltScreen.ac8ceb8a5fd6b6cfc2e0.png",
     "static/media/northCrimeaScreen.png": "/portfolio/static/media/northCrimeaScreen.335c6b904e5bfddc4364.png",
@@ -23,11 +23,11 @@
     "static/media/react.svg": "/portfolio/static/media/react.800a77758994498509519d02fa6af43a.svg",
     "static/media/landing.svg": "/portfolio/static/media/landing.46c9e024f341c9b027a3bada3e735a4a.svg",
     "static/media/webdesign.svg": "/portfolio/static/media/webdesign.f152690156696cbf9153801b032a8c77.svg",
-    "main.d9d77698.css.map": "/portfolio/static/css/main.d9d77698.css.map",
-    "main.28a71456.js.map": "/portfolio/static/js/main.28a71456.js.map"
+    "main.1f3ca5e1.css.map": "/portfolio/static/css/main.1f3ca5e1.css.map",
+    "main.e4b411b0.js.map": "/portfolio/static/js/main.e4b411b0.js.map"
   },
   "entrypoints": [
-    "static/css/main.d9d77698.css",
-    "static/js/main.28a71456.js"
+    "static/css/main.1f3ca5e1.css",
+    "static/js/main.e4b411b0.js"
   ]
 }
