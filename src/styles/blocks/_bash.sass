@@ -19,6 +19,7 @@
     @include largeMobile
         margin: 0
         width: 100%
+        box-shadow: none
 
     &__header
         padding: 8px 15px
@@ -79,38 +80,36 @@
 
 
     &__item
-        display: flex
-        justify-content: flex-start
         margin-bottom: 10px
+        display: flex
 
     &__ascii
         font-size: 8px
         display: flex
         flex-direction: column
 
+        @include largeMobile
+            font-size: 6px
+
     &__directory
-        max-width: 100%
-        width: 56%
         height: 22px
         line-height: 22px
 
     &__span
-        min-width: 40%
-        width: 100%
+        flex-grow: 2
         &-green
             color: $color-green
         &-blue
             color: $color-blue
     &__input
         height: 22px
-        min-width: 40%
-        width: 100%
         background: transparent
         border: none
         font-size: 16px
         letter-spacing: inherit
         color: $color-white
         line-height: 22px
+        flex-grow: 1
 
     &__skills
         display: flex

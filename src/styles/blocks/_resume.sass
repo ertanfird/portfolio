@@ -6,7 +6,7 @@
     display: flex
     align-items: center
     backdrop-filter: blur(2px)
-    position: absolute
+    position: relative
     box-shadow: inset -1px -1px 2px rgba(0, 0, 0, 0.24), inset 1px 1px 0px #FFFFFF, inset -20px -20px 100px 20px rgba(255, 255, 255, 0.62)
     border-radius: 22px
     padding: 20px 32px
@@ -23,6 +23,7 @@
 
     @include largeMobile
         width: 100%
+        margin-top: 120px
 
     &::after
         position: absolute
@@ -56,8 +57,8 @@
 
         @include smallTablet
             bottom: auto
-            top: -35%
+            top: -32%
             left: 50%
             transform: translateX(-50%)
-            height: 230px
-            width: 230px
+            height: 220px
+            width: 220px

@@ -1,5 +1,7 @@
 # Portfolio ErtanFird😎
 
+[![wakatime](https://wakatime.com/badge/github/ertanfird/portfolio.svg)](https://wakatime.com/badge/github/ertanfird/portfolio)
+
 Hi! It is my portfolio [v3.0.0] on **React**
 I tried to make it 🪅unusual and ✨beautiful
 Here I will go into more detail about it 👇🏻👇🏻👇🏻👇🏻

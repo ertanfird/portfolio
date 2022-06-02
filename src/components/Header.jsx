@@ -2,7 +2,7 @@ import React from 'react';
 
 const Header = ({section}) => {
     return (
-        <div className="header">
+        <div className="header" translate="no">
             <div className="header__screen">
                 {section}
             </div>
